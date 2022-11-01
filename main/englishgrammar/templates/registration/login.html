@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{% block title %}Login &#128526;{% endblock %}
+
+{% block content %}
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="/images/tab_icon.ico">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+<style>
+body {
+  background-color: lightblue;
+}
+
+h2 {
+  padding-left: 90px
+  font-family: "Gill Sans", Times, serif;
+}
+
+.button{
+	color: white;
+	background-color: MediumPurple;
+	border-radius: 30%;
+}
+
+.fm {
+	padding-top: 200px;
+	padding-left: 580px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  padding-left: 50px
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+
+a
+
+</style>
+</head>
+<body>
+<div class="fm">
+<div class="center">
+<div>
+  <h2>Log In &#128526;</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class ="button" type="submit">Log In</button>
+  </form>
+</div>
+<h2><a href="{% url 'register' %}">Register</a></h2>
+</div>
+</div>
+  <div class="dropdown">
+  <span>mouse over me</span>
+  <div class="dropdown-content">
+  <p>Username is... username</p>
+    <p>Password is... password</p>
+  </div>
+</div>
+</body>
+</html>
+{% endblock %}
