@@ -8,7 +8,12 @@ This project was built using django framework with MySql database to store the P
 **HOW TO RUN:**
 
 python3 -m venv .venv
+
 source .venv/bin/activate
+
 cd project_location
+
 python manage.py migrate
+
 python manage.py runserver
+
