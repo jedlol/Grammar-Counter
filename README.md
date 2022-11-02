@@ -17,3 +17,4 @@ python manage.py migrate
 
 python manage.py runserver
 
+(secret key and database password not included)
